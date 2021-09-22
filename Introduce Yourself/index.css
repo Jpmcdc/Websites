@@ -1,0 +1,86 @@
+/* @author: Juan Pablo Martinez */
+
+body {
+	margin: 0;
+	background: #222;
+	font-weight: 300;
+	font-family: 'Montserrat';
+}
+
+.container {
+	width: 80%;
+	margin: 0 auto;
+}
+
+header {
+	background: #55d6aa;
+}
+
+.logo {
+	float: left;
+	color: white;
+	font-weight: 300;
+	
+	/* Use this code if you want to use an image
+	padding: 10px 0;
+	max-width: 200px; */
+}
+
+/* The following code styles the Navbar */
+
+nav {
+	float: right;
+}
+
+nav ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+nav li {
+	display: inline-block;
+	margin-left: -5px;
+	padding-top: 25px;
+	
+	position: relative;
+}
+
+nav a {
+	color: white;
+	text-decoration: none;
+	text-transform: uppercase;
+	
+	/* border-style: solid; */
+	padding: 25px;
+	width: 1000px;
+}
+
+nav a:hover {
+	color: #222;
+}
+
+/* This code fixes the navbar as seen in https://youtu.be/FEmysQARWFU */
+header:after {
+	content: '';
+	display: table;
+	clear: both;
+}
+
+/* This code creates the animation on top of the Navbar menu items as seen in https://youtu.be/FEmysQARWFU */
+nav a:before {
+	content: '';
+	display: block;
+	height: 5px;
+	background: #444;
+	
+	position: absolute;
+	top: 0;
+	width: 0%;
+	
+	transition: all ease-in-out 250ms;
+}
+
+nav a:hover::before {
+	width: 100%;
+}
