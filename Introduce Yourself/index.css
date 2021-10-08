@@ -131,3 +131,9 @@ nav a:hover::before {
 	
 	margin-left: 200px;
 }
+
+.galler_img {
+	height: 300px;
+	margin: 30px;
+	display: inline-block;
+}
