@@ -1,0 +1,80 @@
+<!doctype html>
+<html>
+<head>
+
+<meta charset="UTF-8">
+<title>Palindrome</title>
+
+<!-- Bootstrap maxcdn -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+
+<!-- External CSS sheet --->
+<link rel="stylesheet" href="index.css">
+
+<!-- JavaScript -->
+<script>
+
+    function txtPrompt() {
+        var txt;
+        var word = prompt("Please enter a word", "word");
+     
+        if (word == null || word == "") {
+            document.getElementById("word").innerHTML = "Invalid Input. Please try again!"
+            document.getElementById("result").innerHTML = "";
+        } else {
+            document.getElementById("word").innerHTML = "";
+            txt = word;
+        } 
+     
+     // Assume that every word is a palindrome
+     var palindrome = "is a palindrome"
+     
+     // Compare values and if it's not a palindrome then change the output
+     for (var i = 0; i < txt.length; i++) {
+     var j = (txt.length -1) - i;
+     
+        if (txt.charAt(i) != txt.charAt(j)) {
+            palindrome = "is not a palindrome";
+            break;
+            }
+        }     
+     
+     document.getElementById("result").innerHTML = txt + " " + palindrome;  
+}
+
+</script>
+
+</head>
+
+
+<body>
+
+<div class="container" id="Wireframe">
+    <div class="container" id="Title">
+    
+        <!-- Website Title Header -->
+        <h1 id="Name">Palindorme Check</h1>
+    </div>
+    
+    <!-- Check button -->
+    <div class="container" id="Button">
+        <button type="button" class="btn btn-primary" onClick="txtPrompt()">Check</button>
+    </div>
+    
+    <!-- Results -->
+    <div class="container" style="text-align: center; margin-top: 60px;">
+        <p id="word"></p>
+        <p id="result"></p>
+    </div>
+</div>
+
+<!-- Footer --->
+<div class="footer">
+	<p class="copyright"> 2019 © - Juan Pablo Martinez</p>
+</div>
+
+</body>
+</html>
