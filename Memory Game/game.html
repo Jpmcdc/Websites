@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+<head>
+
+    <meta charset="UTF-8">
+    <title>MemoryGame</title>
+
+    <!-- @_author: Juan Pablo Martinez -->
+
+    <!-- Bootstrap maxcdn -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+
+    <!-- External CSS sheet --->
+    <link rel="stylesheet" href="index.css">
+
+    <!-- External JavaScript -->
+    <script src="myScript.js"></script>
+</head>
+
+<body>
+
+    <!-- Timer -->
+    <div class="container"> 
+    
+        <script>myTimer = setInterval(myCounter, 1000)</script>
+        <h1 id="timer">0</h1>
+    </div>
+
+
+<!-- This is the board for the game -->
+    <div id="board" class="container-fluid">
+        <img id="card_1" class="card" src="images/back.png" alt="card" onClick="selectImg(1)">
+        <img id="card_2" class="card" src="images/back.png" alt="card" onClick="selectImg(2)">
+        <img id="card_3" class="card" src="images/back.png" alt="card" onClick="selectImg(3)">
+        <img id="card_4" class="card" src="images/back.png" alt="card" onClick="selectImg(4)">
+        <img id="card_5" class="card" src="images/back.png" alt="card" onClick="selectImg(5)">
+        <img id="card_6" class="card" src="images/back.png" alt="card" onClick="selectImg(6)">
+        <img id="card_7" class="card" src="images/back.png" alt="card" onClick="selectImg(7)">
+        <img id="card_8" class="card" src="images/back.png" alt="card" onClick="selectImg(8)">
+        <img id="card_9" class="card" src="images/back.png" alt="card" onClick="selectImg(9)">
+        <img id="card_10" class="card" src="images/back.png" alt="card" onClick="selectImg(10)">
+        <img id="card_11" class="card" src="images/back.png" alt="card" onClick="selectImg(11)">
+        <img id="card_12" class="card" src="images/back.png" alt="card" onClick="selectImg(12)">
+        <img id="card_13" class="card" src="images/back.png" alt="card" onClick="selectImg(13)">
+        <img id="card_14" class="card" src="images/back.png" alt="card" onClick="selectImg(14)">
+        <img id="card_15" class="card" src="images/back.png" alt="card" onClick="selectImg(15)">
+        <img id="card_16" class="card" src="images/back.png" alt="card" onClick="selectImg(16)">
+        <img id="card_17" class="card" src="images/back.png" alt="card" onClick="selectImg(17)">
+        <img id="card_18" class="card" src="images/back.png" alt="card" onClick="selectImg(18)">
+        <img id="card_19" class="card" src="images/back.png" alt="card" onClick="selectImg(19)">
+        <img id="card_20" class="card" src="images/back.png" alt="card" onClick="selectImg(20)">
+    </div>
+
+    <!-- Make everything in the site visible / not hidden nby the footer -->
+    <p><br><br></p>
+
+    <!-- Footer --->
+    <div class="footer">
+	    <p class="copyright"> 2021 © Juan Pablo Martinez </p>
+    </div>
+</body>
+</html>

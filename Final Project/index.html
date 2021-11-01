@@ -1,0 +1,247 @@
+<!doctype html>
+<html>
+<head>
+
+<!-- @author: Juan Pablo Martinez
+     @_since: March 6th 2019 -->
+
+<!-- Bootstrap mobile first -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+<!-- External Javascript -->
+<script src="myScript.js"></script>
+
+<!-- Navbar CSS import / Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<!-- External CSS -->
+<link rel="stylesheet" type="text/css" href="index.css">
+
+<meta charset="UTF-8">
+<title>Escrow Helper</title>
+
+</head>
+
+<!-- The added code in the body tag is to allow scrollspy in this page -->
+<body data-spy="scroll" data-target=".navbar" data-offset="50" id="body">
+
+<!-- This black screen is to add an opasity effect when menus are open -->
+<div id="black_screen"></div>
+
+<!-- Hambuger Menu -->
+<div class="menu_div" id="menu"> 
+    <h1 class="menu_link" style="margin-top: 90px; ">Social</h1>
+    <h1 class="menu_link">People</h1>
+    <h1 class="menu_link">What We Do</h1>
+    <h1 class="menu_link">About us</h1>
+    <h1 class="menu_link" id="clientlogin_btn">Client Login</h1>
+    <h1 id="menu_copyright"> Escrow Helper</h1>
+</div>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand" id="navbar">
+
+  <!-- Brand name -->
+  <!-- 'mr-auto' class is going to indent the logo left and the rest of the navbar items to the right -->
+  <a class="navbar-brand mr-auto" href="index.html">Escrow Helper</a>
+
+  <!-- Navbar Items -->
+  <ul class="navbar-nav">
+  
+    <!-- 1st Item -->
+    <li class="nav-item">
+      <a class="nav-link" href="#newsboard">Social</a>
+    </li>
+    
+    <!-- 2st Item -->
+    <li class="nav-item">
+      <a class="nav-link" href="#">People</a>
+    </li>
+
+    <!-- 3st Item -->
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="navbardrop_1" data-toggle="dropdown">Services</a>
+      <div class="dropdown-menu">
+        <!-- Dropdown Items -->
+        <div class="dropdown-header">Our Business</div>
+        <div class="dropdown-divider"></div>
+        <a class="dropdown-item" href="#">Wealth Mangement</a>
+        <div class="dropdown-divider"></div>
+        <a class="dropdown-item" href="new_loan.html">Create New Loan</a>
+      </div>
+    </li>
+    
+    <!-- 4st Item -->
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="navbardrop_2" data-toggle="dropdown">About Us</a>
+      <div class="dropdown-menu ">
+        <!-- Dropdown Items -->
+        <div class="dropdown-header">Our Culture</div>
+        <div class="dropdown-divider"></div>
+        <a class="dropdown-item" href="#">Diversity</a>
+        <div class="dropdown-divider"></div>
+        <a class="dropdown-item" href="#">Giving Back</a>
+        <div class="dropdown-divider"></div>
+        <a class="dropdown-item" href="#">Investors Relations</a>
+      </div>
+    </li>
+    
+    <!-- Divider -->
+    <li class="divider-vertical "></li>
+    
+    <!-- LogIn btn -->
+    <li class="nav-item">
+      <a class="nav-link" href="javascript:void(0);" onClick="login_open()">Client Login</a>
+    </li>
+    
+    <!--  Hamburger menu open/close icons  -->
+    <a href="javascript:void(0);" class="icon" onclick="menu_open()">
+      <i class="fa fa-bars"  id="menu_open"></i>
+    </a>
+    
+    <a href="javascript:void(0);" class="icon" onclick="menu_close()">
+      <i class="fa fa-close"  id="menu_close"></i>
+    </a>
+    
+  </ul>
+</nav>
+
+<!-- Login / Signin box-->
+<div id="login_box_wireframe">
+    <div id="login_box">
+        
+        <!-- Close Icon -->
+        <a href="javascript:void(0);" class="icon" onclick="login_close()">
+            <i class="fa fa-close"  id="login_close"></i></a>
+            
+        <!-- Sign in box -->
+        <div id="login_new_user">
+            <h1 class="login_title">Sign in</h1>
+            
+            <p style="margin-top: 70px; font-size: 20px;">Don't have an account yet?</p>
+            <p style="font-size: 20px;">Get yours today!</p>
+            
+            <!-- Sign in btn -->
+            <a href="sign_in.html"><button type="button" class="btn btn-default" id="signin_btn">Sign in</button></a>
+        
+        </div>
+        
+        <div id="login_divider"></div>
+        
+        <!-- Login box -->
+        <div id="login_old_user">
+            <h1 class="login_title">Log in</h1>
+            
+            <!-- Form -->
+            <form>
+                <p class="login_text"> Username </p>
+                <input type="text" name="Username" style="border: solid thin #0F8EC8">
+                <br>
+                <p class="login_text"> Password </p>
+                <input type="password" name="Password" style="border: solid thin #0F8EC8">
+            </form>
+            
+            <!-- Login btn -->
+            <button type="button" class="btn btn-default" id="login_btn">Log in</button>
+            
+            <!-- Password recovery -->
+            <a href="#"><p style="margin-top: 40px;">Forgot your password?</p></a>
+        
+        </div>
+    </div>
+</div>
+
+<!-- Hero -->
+<div id="hero" class="container-fluid">
+  
+  <!-- img for the Hero -->
+    <div class="img" style="padding: 0px;">
+      <img src="https://www.morganstanley.com/pub/content/dam/msdotcom/home/tmt-2019-sf.jpg/_jcr_content/renditions/original" alt="logo" class="img-fluid" id="hero_logo">
+    </div>
+    
+    <!-- Title and info next to the logo in the hero -->
+    <div class="hero">
+      <p class="hero_topic"><strong> ANNOUNCEMENT </strong></p>
+      <a href="#"><h1 class="hero_title"> 2021: Prepare for Acceleration </h1></a>
+      <p class="hero_date">26 Oct, 2021</p>
+
+      <div class="divider_horizontal"></div>
+      
+      <p class="hero_text">Escrow Helper leaders share insights from this year's Tech, Media & Telecom conference such as the impact of AI on healthcare, the ever-evolving media landscape, 5G wireless, the new era of data and more.</p>
+      
+      <button type="button" class="btn btn-default" id="hero_btn">read article</button>
+    </div>
+  </div>
+
+
+<!-- Newsboard -->
+<div class="container-fluid" id="newsboard">
+
+    <a href="#"><div class="article">
+       <p style="padding: 20px 20px; color: #0F8EC8"> INVESTMENT OPPORTUNITY </p>
+       <h1 style="font-size: 25px; margin-top: 50px; padding: 0px 20px;"> BUY AND HOLD GME STOCK </h1>
+       <p style="color:#929292; padding: 0px 20px;"> Feb 14, 2021 </p>
+       <p style="margin: 20px 0px; margin-right: 30px; font-size: 16px; padding: 0px 20px;"> GameStop Corp. is an American video game, consumer electronics, and gaming merchandise retailer. GME stock is sitting 10.4% higher as of Monday morning. The stock is also up 891.3% since the start of the year. </p>
+     </div></a>
+    
+    <div class="article_with_img">
+       <div class="article_img_div"> <img src="https://www.morganstanley.com/content/dam/msdotcom/ideas/healthcare-conference-2021/tile-healthcare-conference-2021.jpg.img.515.medium.jpg/1633717500435.jpg" alt="test" class="article_img"></div>
+       <div class="article_img_text">
+         <p style="padding: 20px 20px; color: #0F8EC8"> MARKET RISKS </p>
+         <h1 style="font-size: 25px; margin-top: 50px; padding: 0px 20px;"> COVID-19 ECONOMIC RISK </h1>
+         <p style="color:#929292; padding: 0px 20px;"> Mar 5, 2021 </p>
+         <p style="margin: 20px 0px; margin-right: 30px; font-size: 16px; padding: 0px 20px;"> Jamie Palmer found a mentor in Lauren Ziadie, who knows exactly how far he’s traveled, from his homeland in Jamaica to success in Escrow Helper </p>
+       </div>
+    </div>
+    
+    <div class="article_with_img">
+       <div class="article_img_div"> <img src="https://www.morganstanley.com/content/dam/msdotcom/ideas/5G-wireless-rollout-asia/tile-5g-wireless-rollout.jpg.img.515.medium.jpg/1605541897817.jpg" alt="5G" class="article_img"></div>
+       <div class="article_img_text">
+         <p style="padding: 20px 20px; color: #0F8EC8"> INVESTMENT OPPORTUNITY </p>
+         <h1 style="font-size: 25px; margin-top: 50px; padding: 0px 20px;"> IS 5G ANY GOOD? </h1>
+         <p style="color:#929292; padding: 0px 20px;"> Oct 11, 2021 </p>
+         <p style="margin: 20px 0px; margin-right: 30px; font-size: 16px; padding: 0px 20px;"> As 5G continues to expand, people are going to feel the impact of the 5G revolution. 5G is expected to be the key for innovation in tomorrow's future. </p>
+       </div>
+    </div>
+    
+    <div class="article">
+       <p style="padding: 20px 20px; color: #0F8EC8"> MARKET RISKS </p>
+       <h1 style="font-size: 25px; margin-top: 50px; padding: 0px 20px;"> EMPLOYEMENT SHORTAGE? </h1>
+       <p style="color:#929292; padding: 0px 20px;"> Oct 25, 2021 </p>
+       <p style="margin: 20px 0px; margin-right: 30px; font-size: 16px; padding: 0px 20px;"> Job openings rates decreased in 21 states and increased in 1 state on the last business day of August. Hires rates decreased in 18 states. Total separations rates increased in 11 states and decreased in 3 states. </p>
+     </div>
+     
+     <div class="article">
+       <p style="padding: 20px 20px; color: #0F8EC8"> EXPERIENCED PROFESSIONALS </p>
+       <h1 style="font-size: 25px; margin-top: 50px; padding: 0px 20px;"> A SHARED CONNECTION </h1>
+       <p style="color:#929292; padding: 0px 20px;"> Mar 5, 2019 </p>
+       <p style="margin: 20px 0px; margin-right: 30px; font-size: 16px; padding: 0px 20px;"> Jamie Palmer found a mentor in Lauren Ziadie, who knows exactly how far he’s traveled, from his homeland in Jamaica to success in Escrow Helper </p>
+     </div>
+     
+     <div class="article_small">
+       <p style="padding: 20px 20px;"> SOCIAL </p>
+       <h1 style="font-size: 23px; margin-top: 108px; padding: 0px 20px; padding-right: 60px;"> We are pleased to be named Best Ivestment Bank in the U.S. Eastern Coast for the fourth consecutive year. </h1>
+     </div>
+     
+     <div class="article">
+       <p style="padding: 20px 20px; color: #0F8EC8"> INVESTMENT OPPORTUNITY </p>
+       <h1 style="font-size: 25px; margin-top: 50px; padding: 0px 20px;"> NFT CRAZE EXLPAINED </h1>
+       <p style="color:#929292; padding: 0px 20px;"> Aug 28, 2020 </p>
+       <p style="margin: 20px 0px; margin-right: 30px; font-size: 16px; padding: 0px 20px;"> A non-fungible token is a unique and non-interchangeable unit of data stored on a digital ledger. NFTs can be used to represent easily-reproducible items  and use blockchain technology to establish a verified and public proof of ownership. </p>
+     </div>
+  </div>  
+
+</body>
+</html>

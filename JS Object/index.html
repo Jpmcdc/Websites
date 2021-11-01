@@ -1,0 +1,77 @@
+<!doctype html>
+<html>
+<head>
+
+    <meta charset="UTF-8">
+    <title>Choose your Car</title>
+
+    <!-- Bootstrap maxcdn -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+
+    <!-- External CSS sheet --->
+    <link rel="stylesheet" href="index.css">
+
+    <!-- JavaScript -->
+    <script>
+	
+	// Create my car object
+	const car = {make:"Tesla", model:"S", color:"White"};
+	
+	// Function to display the car make
+	function make () {
+		return document.getElementById("result").innerHTML = "The car make is: " + car.make;
+	}
+	
+	// Function to display the car model
+	function model () {
+		return document.getElementById("result").innerHTML = "The car model is: " + car.model;
+	}
+	
+	// Function to display the car color
+	function color () {
+		return document.getElementById("result").innerHTML = "The car color is: " + car.color;
+	}
+
+	</script>
+</head>
+
+
+<body>
+
+    <!-- Website Title Header -->
+	<div class="container">
+    	<div class="container" id="Title">
+
+        	<h1 id="Name">my dream car</h1>
+    	</div>
+    
+    	<!-- Make button -->
+    	<div class="btncontainer">
+        	<button type="button" class="btn btn-primary" onClick="make()">Make</button>
+    	</div>
+		
+		<!-- Model button -->
+   	 	<div class="btncontainer">
+        	<button type="button" class="btn btn-primary" onClick="model()">Model</button>
+    	</div>
+		
+		<!-- Color button -->
+    	<div class="btncontainer">
+        	<button type="button" class="btn btn-primary" onClick="color()">Color</button>
+    	</div>
+    
+    	<!-- Results -->
+    	<div class="container" style="text-align: center; margin-top: 60px;">
+        	<p id="result"></p>
+    	</div>
+	</div>
+
+	<!-- Footer --->
+	<div class="footer">
+		<p class="copyright"> 2021 © Juan Pablo Martinez</p>
+	</div>
+</body>
+</html>

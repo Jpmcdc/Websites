@@ -1,0 +1,74 @@
+@charset "UTF-8";
+/* CSS Document */
+
+#Title {
+    text-align: center;
+    margin: 14px;
+    margin-bottom: 20px;
+	margin-top: 50px;
+    font-size: 40px;
+	
+	border-bottom: solid thin black;
+}
+
+#Name {
+    font-size: 50px;
+	font-variant-caps: petite-caps;
+}
+
+#Button {
+    text-align: center;
+}
+
+
+#Wireframe {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+.btn {
+    width: 200px;
+    margin: 20px;
+    font-size: 20px;
+}
+
+
+div.footer {
+	background-color: #222222;
+	text-align: center;
+	padding: 7px;
+	position: fixed;
+    bottom: 0px;
+	width: 100%;
+}
+
+.copyright {
+	color: #979797;
+}
+
+#board {
+    display: inline-block;
+    align-content: center;
+    text-align: center;
+}
+
+.card {
+    display: inline-block;
+    margin: 0;
+    margin-bottom: 5px;
+    padding: 0;
+    height: auto;
+    width: 240px;
+}
+.btncontainer {
+	display: inline-block;
+}
+
+.container {
+	justify-content: center;
+	align-content: center;
+	text-align: center;
+}

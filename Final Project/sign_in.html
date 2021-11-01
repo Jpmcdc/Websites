@@ -1,0 +1,192 @@
+<!doctype html>
+<html>
+<head>
+
+<!-- @author: Juan Pablo Martinez
+     @_since: March 26th 2019 -->
+
+<!-- Bootstrap mobile first -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+<!-- External Javascript -->
+<script src="myScript.js"></script>
+
+<!-- Navbar CSS import / Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<!-- External CSS -->
+<link rel="stylesheet" type="text/css" href="index.css">
+
+<meta charset="UTF-8">
+<title>Sign in</title>
+
+</head>
+
+<!-- The added code in the body tag is to allow scrollspy in this page -->
+<body data-spy="scroll" data-target=".navbar" data-offset="50" id="body">
+
+<!-- This black screen is to add an opasity effect when menus are open -->
+<div id="black_screen"></div>
+
+<!-- Hambuger Menu -->
+<div class="menu_div" id="menu"> 
+    <h1 class="menu_link" style="margin-top: 90px; ">Ideas</h1>
+    <h1 class="menu_link">People</h1>
+    <h1 class="menu_link">What We Do</h1>
+    <h1 class="menu_link">About us</h1>
+    <h1 class="menu_link" id="clientlogin_btn">Client Login</h1>
+    <h1 id="menu_copyright"> Escrow Helper</h1>
+</div>
+
+<!-- Navbar -->
+<!-- DONE -->
+<nav class="navbar navbar-expand" id="navbar">
+  <!-- Brand name -->
+  <!-- 'mr-auto' class is going to indent the logo left and the rest of the navbar items to the right -->
+  <a class="navbar-brand mr-auto" href="index.html">Escrow Helper</a>
+
+
+  <!-- Navbar Items -->
+  <ul class="navbar-nav">
+  
+    <!-- 1st Item -->
+    <li class="nav-item">
+      <a class="nav-link" href="#newsboard">Ideas</a>
+    </li>
+    
+    <!-- 2st Item -->
+    <li class="nav-item">
+      <a class="nav-link" href="#">People</a>
+    </li>
+
+    <!-- 3st Item -->
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="navbardrop_1" data-toggle="dropdown">What We Do</a>
+      <div class="dropdown-menu">
+        <!-- Dropdown Items -->
+        <div class="dropdown-header">Our Business</div>
+        <div class="dropdown-divider"></div>
+        <a class="dropdown-item" href="#">Wealth Mangement</a>
+        <div class="dropdown-divider"></div>
+        <a class="dropdown-item" href="#">Sales & Trading</a>
+        <div class="dropdown-divider"></div>
+        <a class="dropdown-item" href="#">Research</a>
+      </div>
+    </li>
+    
+    <!-- 4st Item -->
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="navbardrop_2" data-toggle="dropdown">About Us</a>
+      <div class="dropdown-menu ">
+        <!-- Dropdown Items -->
+        <div class="dropdown-header">Our Culture</div>
+        <div class="dropdown-divider"></div>
+        <a class="dropdown-item" href="#">Diversity</a>
+        <div class="dropdown-divider"></div>
+        <a class="dropdown-item" href="#">Giving Back</a>
+        <div class="dropdown-divider"></div>
+        <a class="dropdown-item" href="#">Investors Relations</a>
+      </div>
+    </li>
+    
+    <!-- Divider -->
+    <li class="divider-vertical "></li>
+    
+    <!-- LogIn btn -->
+    <li class="nav-item">
+      <a class="nav-link" href="javascript:void(0);" onClick="login_open()">Client Login</a>
+    </li>
+    
+    <!--  Hamburger menu open/close icons  -->
+    <a href="javascript:void(0);" class="icon" onclick="menu_open()">
+      <i class="fa fa-bars"  id="menu_open"></i>
+    </a>
+    
+    <a href="javascript:void(0);" class="icon" onclick="menu_close()">
+      <i class="fa fa-close"  id="menu_close"></i>
+    </a>
+    
+  </ul>
+</nav>
+
+<!-- Login / Signin box-->
+<div id="login_box_wireframe">
+    <div id="login_box">
+        
+        <!-- Close Icon -->
+        <a href="javascript:void(0);" class="icon" onclick="login_close()">
+            <i class="fa fa-close"  id="login_close"></i></a>
+            
+        <!-- Sign in box -->
+        <div id="login_new_user">
+            <h1 class="login_title">Sign in</h1>
+            
+            <p style="margin-top: 70px; font-size: 20px;">Don't have an account yet?</p>
+            <p style="font-size: 20px;">Get yours today!</p>
+            
+            <!-- Sign in btn -->
+            <a href="sign_in.html"><button type="button" class="btn btn-default" id="signin_btn">Sign in</button></a>
+        
+        </div>
+        
+        <div id="login_divider"></div>
+        
+        <!-- Login box -->
+        <div id="login_old_user">
+            <h1 class="login_title">Log in</h1>
+            
+            <!-- Form -->
+            <form>
+                <p class="login_text"> Username </p>
+                <input type="text" name="Username" style="border: solid thin #0F8EC8">
+                <br>
+                <p class="login_text"> Password </p>
+                <input type="password" name="Password" style="border: solid thin #0F8EC8">
+            </form>
+            
+            <!-- Login btn -->
+            <button type="button" class="btn btn-default" id="login_btn">Log in</button>
+            
+            <!-- Password recovery -->
+            <a href="#"><p style="margin-top: 40px;">Forgot your password?</p></a>
+        
+        </div>
+    
+    
+    
+    </div>
+</div>
+
+<!-- Sign in forms -->
+<div id="signin_wireframe">
+    <div id="signin_forms">
+    
+        <!-- Title -->
+        <h1 class="login_title" style="margin-top: 20px;">Create Your Account</h1>
+        
+        <form>
+            <input class="signin_form_short" type="text" name="firstname" value="First Name" onfocus="if (this.value=='First Name') this.value='';" style="margin-right: 10px">
+            <input class="signin_form_short" type="text" name="lastname" value="Last Name" onfocus="if (this.value=='Last Name') this.value='';"> <br>
+            <input class="signin_form_long" type="text" name="Username" value="Username" onfocus="if (this.value=='Username') this.value='';"> <br>
+            <input class="signin_form_long" type="text" name="Email" value="Email" onfocus="if (this.value=='Email') this.value='';"> <br>
+        </form>
+    
+    
+    </div>
+</div>
+
+
+</body>
+</html>
