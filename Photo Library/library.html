@@ -1,0 +1,118 @@
+<!doctype html>
+<!-- @author: Jpmcdc -->
+
+<html>
+	
+<head>
+	
+<meta charset="utf-8">
+<title>Home</title>
+	
+<!-- Load External CSS style sheet -->
+<link href="index.css" rel="stylesheet"  type="text/css">
+	
+<!-- Import Google Font -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+
+<script>
+
+	var imgArray1 = new Array();
+
+	imgArray1[0] = new Image();
+	imgArray1[0].src = 'images/Splash_image1.jpg';
+
+	imgArray1[1] = new Image();
+	imgArray1[1].src = 'images/Splash_image2.jpg';
+	
+	imgArray1[2] = new Image();
+	imgArray1[2].src = 'images/Splash_image3.jpg';
+	
+	imgArray1[3] = new Image();
+	imgArray1[3].src = 'images/Splash_image4.jpg';
+
+/*------------------------------------*/
+
+	function nextImage(element)
+	{
+		var img = document.getElementById(element);
+
+		for(var i = 0; i < imgArray1.length;i++)
+		{
+			if(imgArray1[i].src == img.src) // << check this
+			{
+				if(i === imgArray1.length){
+					document.getElementById(element).src = imgArray1[0].src;
+					break;
+				}
+				document.getElementById(element).src = imgArray1[i+1].src;
+				break;
+        	}
+    	}
+	}
+	
+	function previousImage(element)
+	{
+		var img = document.getElementById(element);
+
+		for(var i = 0; i < imgArray1.length;i++)
+		{
+			if(imgArray1[i].src == img.src) // << check this
+			{
+				if(i === imgArray1.length){
+					document.getElementById(element).src = imgArray1[0].src;
+					break;
+				}
+				document.getElementById(element).src = imgArray1[i-1].src;
+				break;
+        	}
+    	}
+	}
+	
+</script>
+	
+</head>
+
+<body>
+	
+	<!-- This is the website header -->
+	<header>
+		<div class="container">
+			
+			<!-- This is the name of the site -->
+			<h2 class="logo"> Photo Library Online </h2>
+			
+			<!-- Navbar elements -->
+			<nav>
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="library.html">Library</a></li>
+				</ul>
+			</nav>
+		
+		</div>
+	</header>
+	
+	<div id="splash">
+		<img src="images/Splash_image1.jpg" alt="" id="mainImg">
+
+	</div> 
+
+	<div id="imglist">
+		<a href="javascript:nextImage('mainImg')"><img src="images/arrowR.png" alt="" id="next"></a>
+		
+		<a href="javascript:previousImage('mainImg')"><img src="images/arrowL.png" alt="" id="previous"></a>
+	
+	</div>
+
+	
+    <!-- Website footer -->
+    <br><br><br>
+    <div class="footer">
+        <p> 2021 © Juan Pablo Martinez </p>
+    </div>
+</body>
+	
+	
+</html>

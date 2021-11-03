@@ -2,7 +2,7 @@
 
 body {
 	margin: 0;
-	background: #222;
+	background: white;
 	font-weight: 300;
 	font-family: 'Montserrat';
     
@@ -112,10 +112,49 @@ nav a:hover::before {
 	text-transform: uppercase;
 	font-size: 60px;
 	
-	bottom: 420px;
+	bottom: 740px;
 	position: absolute;
 	z-index: 1;
-	
-	text-shadow: -3px 0 white, 0 3px white, 3px 0 white, 0 -3px white;
 }
 
+#home_bod {
+	overflow: hidden;
+}
+
+#mainImg {
+	width: auto;
+	height: 800px;
+	
+	border: thick black solid;
+	border-radius: 10px;
+}
+
+#splash {
+	align-content: center;
+	text-align: center;
+	
+	margin-top: 20px;
+}
+
+
+
+#next {
+	width: 50px;
+
+	display: inline-block;
+	position: absolute;
+	
+	bottom: 450px;
+	right: 160px;
+}
+
+#previous {
+	width: 50px;
+
+	display: inline-block;
+	position: absolute;
+	
+	bottom: 450px;
+	left: 160px;
+}
+}
